@@ -8,8 +8,12 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
-    scroll-behavior: smooth;
-    
+    scroll-behavior: smooth;   
+}
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 55%;
+    }
 }
 
 body {
@@ -30,9 +34,14 @@ a {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-
     text-align: center;
-    
+}
+@media only screen and (max-width: 600px) {
+    .form {
+        background-position: center;
+        height: 100%;
+        padding-bottom: 1rem;
+    }
 }
 
 .form__nav {
@@ -46,8 +55,13 @@ a {
     padding-right: 80rem;
     padding-left: 4rem;
     color: #fff;
-    
 }
+@media only screen and (max-width: 600px) {
+    .form__heading {
+        padding-right: 25rem;
+    }
+}
+
 .form__list {
     display: flex;
     text-decoration: none;
@@ -73,8 +87,15 @@ a {
     margin-top: 10rem;
     margin-left: 45rem;
     text-align: center;
-    
 }
+
+@media only screen and (max-width: 600px) {
+    .form__details {
+        margin-top: 1rem;
+        margin-left: 16rem;
+    }
+}
+
 .form__input {
     border: 1.5px solid#ffff00;
     border-radius: 20px;
@@ -95,6 +116,13 @@ a {
     display: block;
     transition: all .3s;
 }
+@media only screen and (max-width: 600px) {
+    .form__input {
+        width: 70%;
+    }
+}
+
+
 .fa {
     margin-right: 1rem;
     color: #fff;
@@ -127,6 +155,11 @@ a {
     margin-bottom: 2rem;
     width: 100%;
     text-align: center;
+}
+@media only screen and (max-width: 600px) {
+    .form__radio-detail {
+        padding-left: 6rem;
+    }
 }
 
 .form__radio-label {
@@ -191,6 +224,13 @@ a {
   
   padding: 8px;
 }
+
+@media only screen and (max-width: 600px) {
+    .input-container {
+        width: 70%;
+    }
+}
+
 .icon {
     padding: 10px;
     background-color:#f1f1f1;
@@ -230,9 +270,16 @@ a {
     margin-right: 50rem;
     opacity: 0.9;
   }
+
+  @media only screen and (max-width: 600px) {
+    .btn {
+        width: 70%;
+    }
+}
   
 .btn:hover {
     opacity: 1;
+    border: none;
 }
 /* LOGIN PAGE END */
 
@@ -247,6 +294,12 @@ a {
     display: block;
     box-shadow: 0 2rem 4rem rgba(#aaa, .2);
     position: relative;
+}
+
+@media only screen and (max-width: 600px) {
+    .regpage__content {
+        width: 60%;
+    }
 }
     
 .regpage__group {
@@ -273,10 +326,10 @@ a {
 .regpage__input:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(#6D5D4B, .1);
-    border-bottom: 3px solid #ffff00;
+    border: 2px solid #ffff00;
 }
 .regpage__input:focus:invalid {
-    border-bottom: 3px solid #aa2233;
+    border: 2px solid #aa2233;
 }
 
 .regpage__input::-webkit-input-placeholder {
@@ -286,7 +339,6 @@ a {
     font-family: inherit;
     font-size: 1.2rem;
     font-weight: 500;
-    margin-top: 1rem;
     margin-left: 2.5rem;
     text-align: left;
     display: block;
@@ -296,10 +348,8 @@ a {
 .regpage__input:placeholder-shown + .regpage__label {/* . // sibling selector  */
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-4rem);
+    transform: translateY(-2rem);
 }
-
-
 
 .regpage__button {
     border: 2px solid#ffff00;
@@ -317,7 +367,7 @@ a {
 }
 
 
-.regpage__button:hover, .contact-me:hover {
+.regpage__button:hover {
     background-color: rgba(255, 255, 255, 0.4); 
     border: 2px solid #ffff00;
     color: #ffff00;
